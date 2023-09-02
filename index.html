@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .video {
+            width: 300px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Slider</h1>
+    <label for="video1Toggle">Video 1</label>
+    <input type="checkbox" id="video1Toggle" class="video-toggle" checked>
+    <label for="video2Toggle">Video 2</label>
+    <input type="checkbox" id="video2Toggle" class="video-toggle" checked>
+    <label for="video3Toggle">Video 3</label>
+    <input type="checkbox" id="video3Toggle" class="video-toggle" checked>
+    <label for="video4Toggle">Video 4</label>
+    <input type="checkbox" id="video4Toggle" class="video-toggle" checked>
+
+    <div class="video-container">
+        <video id="video1" class="video" src="public/video1.mp4" controls></video>
+        <video id="video2" class="video" src="public/video2.mp4" controls></video>
+        <video id="video3" class="video" src="public/video3.mp4" controls></video>
+        <video id="video4" class="video" src="public/video4.mp4" controls></video>
+    </div>
+
+    <script>
+        const videoToggles = document.querySelectorAll('.video-toggle');
+        const videos = document.querySelectorAll('.video');
+
+        videoToggles.forEach((toggle, index) => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    videos[index].style.display = 'block';
+                } else {
+                    videos[index].style.display = 'none';
+                }
+
+                // Adjust video positions based on visible videos
+                const visibleVideos = Array.from(videos).filter((video) => video.style.display === 'block');
+                const numVisibleVideos = visibleVideos.length;
+
+                if (numVisibleVideos === 1) {
+                    visibleVideos[0].style.width = '100%';
+                } else if (numVisibleVideos > 1) {
+                    visibleVideos.forEach((video) => {
+                        video.style.width = `${100 / numVisibleVideos}%`;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
