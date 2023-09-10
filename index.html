@@ -3,69 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Slider</title>
+    <title>Prototipo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .video {
-            width: 300px;
-            height: 200px;
-            display: none;
-        }
     </style>
 </head>
-<body>
-    <h1>Video Slider</h1>
-    <label for="video1Toggle">Video 1</label>
-    <input type="checkbox" id="video1Toggle" class="video-toggle" checked>
-    <label for="video2Toggle">Video 2</label>
-    <input type="checkbox" id="video2Toggle" class="video-toggle" checked>
-    <label for="video3Toggle">Video 3</label>
-    <input type="checkbox" id="video3Toggle" class="video-toggle" checked>
-    <label for="video4Toggle">Video 4</label>
-    <input type="checkbox" id="video4Toggle" class="video-toggle" checked>
+<body style="background-color: rgb(51, 79, 84)">
 
-    <div class="video-container">
-        <video id="video1" class="video" src="public/video1.mp4" controls></video>
-        <video id="video2" class="video" src="public/video2.mp4" controls></video>
-        <video id="video3" class="video" src="public/video3.mp4" controls></video>
-        <video id="video4" class="video" src="public/video4.mp4" controls></video>
+    <div style="position: absolute; left: 0%; top: 81%; width:100%; height:19%; cursor: pointer; border: none; background-color: rgb(109, 152, 160);"></div>
+    <img id="boton1" src="Grafica\Boton_1.png" style="position: absolute; left: 24%; top: 83%; width:10%; height:15%; cursor: pointer;"  >
+    <img id="boton2" src="Grafica\Boton_2.png" style="position: absolute; left: 38%; top: 83%; width:10%; height:15%; cursor: pointer;"  >
+    <img id="boton3" src="Grafica\Boton_3.png" style="position: absolute; left: 52%; top: 83%; width:10%; height:15%; cursor: pointer;"  >
+    <img id="boton4" src="Grafica\Boton_4.png" style="position: absolute; left: 66%; top: 83%; width:10%; height:15%; cursor: pointer;"  >
+    
+    
+    <div id="pant1" style="display: none; ">
+        <img id="pant1_1_cam1" src="Grafica\Camara_1.jpg" style="position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
+        <img id="pant1_1_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
+        <img id="pant1_1_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
+        <div id="pant1_1" style="position: absolute; left: 2%; top: 3%; width:96%; height:75%;" ></div>
+        <img id="pant1_2_mapa" src="Grafica\Mapa.png" style="position: absolute; left: 78%; top: 58%; width:20%; height:20%;"  >
+        <div id="pant1_2" style="position: absolute; left: 78%; top: 58%; width:20%; height:20%;"  ></div>
+    </div>
+    
+    <div id="pant2" style="display: none; ">
+        
+        <img id="pant2_1_cam1" src="Grafica\Camara_1.jpg" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:75%;"  >
+        <img id="pant2_1_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:75%;"  >
+        <img id="pant2_1_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:75%;"  >
+        <img id="pant2_1_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:75%;"  >
+        
+        <img id="pant2_2_cam1" src="Grafica\Camara_1.jpg" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:75%;"  >
+        <img id="pant2_2_cam2" src="Grafica\Camara_2.jpg" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:75%;"  >
+        <img id="pant2_2_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:75%;"  >
+        <img id="pant2_2_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:75%;"  >
+        
+        <div id="pant2_1" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:75%;"  ></div>
+        <div id="pant2_2" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:75%;"  ></div>
+    </div>
+
+    <div id="pant3" style="display: none; ">
+        
+        <img id="pant3_1_cam1" src="Grafica\Camara_1.jpg" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant3_1_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant3_1_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant3_1_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        
+        <img id="pant3_2_cam1" src="Grafica\Camara_1.jpg" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant3_2_cam2" src="Grafica\Camara_2.jpg" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant3_2_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant3_2_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        
+        <img id="pant3_3_cam1" src="Grafica\Camara_1.jpg" style="display: none; position: absolute; left: 2%; top: 42%; width:96%; height:36%;"  >
+        <img id="pant3_3_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 42%; width:96%; height:36%;"  >
+        <img id="pant3_3_cam2_i" src="Grafica\Camara_2_i.jpg" style="position: absolute; left: 2%; top: 42%; width:96%; height:36%;"  >
+        <img id="pant3_3_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 2%; top: 42%; width:96%; height:36%;"  >
+        
+        <div id="pant3_1" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  > </div>
+        <div id="pant3_2" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  > </div>
+        <div id="pant3_3" style="position: absolute; left: 2%; top: 42%; width:96%; height:36%;"  > </div>
+    </div>
+
+    <div id="pant4" style="display: none; ">
+        
+        <img id="pant4_1_cam1" src="Grafica\Camara_1.jpg" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant4_1_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant4_1_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant4_1_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  >
+        
+        <img id="pant4_2_cam1" src="Grafica\Camara_1.jpg" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant4_2_cam2" src="Grafica\Camara_2.jpg" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant4_2_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        <img id="pant4_2_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  >
+        
+        <img id="pant4_3_cam1" src="Grafica\Camara_1.jpg" style="display: none; position: absolute; left: 2%; top: 42%; width:47.5%; height:36%;"  >
+        <img id="pant4_3_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 42%; width:47.5%; height:36%;"  >
+        <img id="pant4_3_cam2_i" src="Grafica\Camara_2_i.jpg" style="position: absolute; left: 2%; top: 42%; width:96%; width:47.5%; height:36%;"  >
+        <img id="pant4_3_mapa" src="Grafica\Mapa.png" style="display: none; position: absolute; left: 2%; top: 42%; width:47.5%; height:36%;"  >
+        
+        <img id="pant4_4_cam1" src="Grafica\Camara_1.jpg" style="display: none; position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  >
+        <img id="pant4_4_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  >
+        <img id="pant4_4_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  >
+        <img id="pant4_4_mapa" src="Grafica\Mapa.png" style="position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  >
+        
+        <div id="pant4_1" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  > </div>
+        <div id="pant4_2" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  > </div>
+        <div id="pant4_3" style="position: absolute; left: 2%; top: 42%; width:47.5%; height:36%;"  > </div>
+        <div id="pant4_3" style="position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  > </div>
     </div>
 
     <script>
-        const videoToggles = document.querySelectorAll('.video-toggle');
-        const videos = document.querySelectorAll('.video');
+        let estado = 0;
+        var bandera =0;
+        var pant_2_1_ult = 0;
+        var pant_2_2_ult = 1;
+        var pant_2_1di = ['block','none','none','none'];
+        var pant_2_2di = ['none','block','none','none'];
 
-        videoToggles.forEach((toggle, index) => {
-            toggle.addEventListener('change', () => {
-                if (toggle.checked) {
-                    videos[index].style.display = 'block';
-                } else {
-                    videos[index].style.display = 'none';
-                }
+        var pant_3_1di = ['block','none','none','none'];
+        var pant_3_2di = ['none','block','none','none'];
+        var pant_3_3di = ['none','none','block','none'];
 
-                // Adjust video positions based on visible videos
-                const visibleVideos = Array.from(videos).filter((video) => video.style.display === 'block');
-                const numVisibleVideos = visibleVideos.length;
+        var pant_4_1di = ['block','none','none','none'];
+        var pant_4_2di = ['none','block','none','none'];
+        var pant_4_3di = ['none','none','block','none'];
+        var pant_4_4di = ['none','none','none','block'];
+        
 
-                if (numVisibleVideos === 1) {
-                    visibleVideos[0].style.width = '100%';
-                } else if (numVisibleVideos > 1) {
-                    visibleVideos.forEach((video) => {
-                        video.style.width = `${100 / numVisibleVideos}%`;
-                    });
-                }
-            });
+        boton1.addEventListener('click', function() {
+            if(estado != 1){
+            Estado0();
+            pant1.style.display = 'block';
+            estado = 1;
+            }else{
+                Estado0();
+            }
         });
+
+        boton2.addEventListener('click', function() {
+            if(estado != 2){
+            Estado0();
+            pant2.style.display = 'block';
+            estado = 2;
+            }else{
+                Estado0();
+            }
+        });
+
+        boton3.addEventListener('click', function() {
+            if(estado != 3){
+            Estado0();
+            pant3.style.display = 'block';
+            estado = 3;
+            }else{
+                Estado0();
+            }
+        });
+
+        boton4.addEventListener('click', function() {
+            if(estado != 4){
+            Estado0();
+            pant4.style.display = 'block';
+            estado = 4;
+            }else{
+                Estado0();
+            }
+        });
+
+        pant1_1.addEventListener('click', function() {
+            if(pant1_1_cam1.style.display == 'block'){
+                pant1_1_cam1.style.display = 'none';
+                pant1_1_cam2.style.display = 'block';
+            }else{
+                if(pant1_1_cam2.style.display == 'block'){
+                    pant1_1_cam2.style.display = 'none';
+                    pant1_1_cam2_i.style.display = 'block';
+                }else{
+                    pant1_1_cam1.style.display = 'block';
+                    pant1_1_cam2_i.style.display = 'none';
+                }
+            }
+        });
+
+        pant2_1.addEventListener('click', function() {
+            bandera = 0;
+            for(var i=0; i<4; i++) {
+                //alert('HOLA');
+                if(pant_2_1di[i]=='none' && pant_2_2di[i]=='none' && bandera==1){
+                    pant_2_1di = ['none','none','none','none'];
+                    pant_2_1di[i] = 'block';
+                    break;
+                }
+                if(pant_2_1di[i]=='block' && bandera==0){
+                    bandera = 1;
+                    if(i==3){
+                        i=-1;
+                    }
+                }
+                if(pant_2_2di[3]=='block' && bandera==1 && i==2){
+                    bandera = 1;
+                    i=-1;
+                }
+            }
+            pant2_1_cam1.style.display = pant_2_1di[0];
+            pant2_1_cam2.style.display = pant_2_1di[1];
+            pant2_1_cam2_i.style.display = pant_2_1di[2];
+            pant2_1_mapa.style.display = pant_2_1di[3];
+        });
+
+        pant2_2.addEventListener('click', function() {
+            
+            bandera = 0;
+            for(var i=0; i<4; i++) {
+                //alert('HOLA');
+                if(pant_2_2di[i]=='none' && pant_2_1di[i]=='none' && bandera==1){
+                    pant_2_2di = ['none','none','none','none'];
+                    pant_2_2di[i] = 'block';
+                    break;
+                }
+                if(pant_2_2di[i]=='block' && bandera==0){
+                    bandera = 1;
+                    if(i==3){
+                        i=-1;
+                    }
+                }
+                if(pant_2_1di[3]=='block' && bandera==1 && i==2){
+                    bandera = 1;
+                    i=-1;
+                }
+            }
+            pant2_2_cam1.style.display = pant_2_2di[0];
+            pant2_2_cam2.style.display = pant_2_2di[1];
+            pant2_2_cam2_i.style.display = pant_2_2di[2];
+            pant2_2_mapa.style.display = pant_2_2di[3];
+        });
+
+        pant3_1.addEventListener('click', function() {
+            
+            if(pant_3_1di[0]=='none' && pant_3_2di[0]=='none' && pant_3_3di[0]=='none'){
+                pant_3_1di = ['block','none','none','none'];
+            }else{
+                if(pant_3_1di[1]=='none' && pant_3_2di[1]=='none' && pant_3_3di[1]=='none'){
+                pant_3_1di = ['none','block','none','none'];
+                }else{
+                    if(pant_3_1di[2]=='none' && pant_3_2di[2]=='none' && pant_3_3di[2]=='none'){
+                    pant_3_1di = ['none','none','block','none'];
+                    }else{
+                        pant_3_1di = ['none','none','none','block'];
+                    }
+            }}
+
+            pant3_1_cam1.style.display = pant_3_1di[0];
+            pant3_1_cam2.style.display = pant_3_1di[1];
+            pant3_1_cam2_i.style.display = pant_3_1di[2];
+            pant3_1_mapa.style.display = pant_3_1di[3];
+        });
+
+        pant3_2.addEventListener('click', function() {
+            
+            if(pant_3_1di[0]=='none' && pant_3_2di[0]=='none' && pant_3_3di[0]=='none'){
+                pant_3_2di = ['block','none','none','none'];
+            }else{
+                if(pant_3_1di[1]=='none' && pant_3_2di[1]=='none' && pant_3_3di[1]=='none'){
+                pant_3_2di = ['none','block','none','none'];
+                }else{
+                    if(pant_3_1di[2]=='none' && pant_3_2di[2]=='none' && pant_3_3di[2]=='none'){
+                    pant_3_2di = ['none','none','block','none'];
+                    }else{
+                        pant_3_2di = ['none','none','none','block'];
+                    }
+            }}
+
+            pant3_2_cam1.style.display = pant_3_2di[0];
+            pant3_2_cam2.style.display = pant_3_2di[1];
+            pant3_2_cam2_i.style.display = pant_3_2di[2];
+            pant3_2_mapa.style.display = pant_3_2di[3];
+        });
+
+        pant3_3.addEventListener('click', function() {
+            
+            if(pant_3_1di[0]=='none' && pant_3_2di[0]=='none' && pant_3_3di[0]=='none'){
+                pant_3_3di = ['block','none','none','none'];
+            }else{
+                if(pant_3_1di[1]=='none' && pant_3_2di[1]=='none' && pant_3_3di[1]=='none'){
+                pant_3_3di = ['none','block','none','none'];
+                }else{
+                    if(pant_3_1di[2]=='none' && pant_3_2di[2]=='none' && pant_3_3di[2]=='none'){
+                    pant_3_3di = ['none','none','block','none'];
+                    }else{
+                        pant_3_3di = ['none','none','none','block'];
+                    }
+            }}
+
+            pant3_3_cam1.style.display = pant_3_3di[0];
+            pant3_3_cam2.style.display = pant_3_3di[1];
+            pant3_3_cam2_i.style.display = pant_3_3di[2];
+            pant3_3_mapa.style.display = pant_3_3di[3];
+        });
+
+        pant4_1.addEventListener('click', function() {
+
+            if(pant_4_1di[0]=='block'){
+                alert('hola');
+                pant_4_1di = ['none','block','none','none'];
+                pant_4_2di = ['none','none','block','none'];
+                pant_4_3di = ['none','none','none','block'];
+                pant_4_4di = ['block','none','none','none'];
+            }else{
+                if(pant_4_1di[1]=='block'){
+                pant_4_1di = ['none','none','block','none'];
+                pant_4_2di = ['none','none','none','block'];
+                pant_4_3di = ['block','none','none','none'];
+                pant_4_4di = ['none','block','none','none'];
+            }else{
+                if(pant_4_1di[2]=='block'){
+                pant_4_1di = ['none','none','none','block'];
+                pant_4_2di = ['block','none','none','none'];
+                pant_4_3di = ['none','block','none','none'];
+                pant_4_4di = ['none','none','block','none'];
+            }else{
+                if(pant_4_1di[3]=='block'){
+                pant_3_1di = ['block','none','none','none'];
+                pant_3_2di = ['none','block','none','none'];
+                pant_3_3di = ['none','none','block','none'];
+                pant_3_4di = ['none','none','none','block'];
+            }else{
+
+                
+            }}}}
+            pant4_1_cam1.style.display = pant_4_1di[0];
+            pant4_1_cam2.style.display = pant_4_1di[1];
+            pant4_1_cam2_i.style.display = pant_4_1di[2];
+            pant4_1_mapa.style.display = pant_4_1di[3];
+            pant4_2_cam1.style.display = pant_4_2di[0];
+            pant4_2_cam2.style.display = pant_4_2di[1];
+            pant4_2_cam2_i.style.display = pant_4_2di[2];
+            pant4_2_mapa.style.display = pant_4_2di[3];
+            pant4_3_cam1.style.display = pant_4_3di[0];
+            pant4_3_cam2.style.display = pant_4_3di[1];
+            pant4_3_cam2_i.style.display = pant_4_3di[2];
+            pant4_3_mapa.style.display = pant_4_3di[3];
+            pant4_4_cam1.style.display = pant_4_4di[0];
+            pant4_4_cam2.style.display = pant_4_4di[1];
+            pant4_4_cam2_i.style.display = pant_4_4di[2];
+            pant4_4_mapa.style.display = pant_4_4di[3];
+        });
+                pant4_1.addEventListener('click', function() {
+
+            if(pant_4_1di[0]=='block'){
+                alert('hola');
+                pant_4_1di = ['none','block','none','none'];
+                pant_4_2di = ['none','none','block','none'];
+                pant_4_3di = ['none','none','none','block'];
+                pant_4_4di = ['block','none','none','none'];
+            }else{
+                if(pant_4_1di[1]=='block'){
+                pant_4_1di = ['none','none','block','none'];
+                pant_4_2di = ['none','none','none','block'];
+                pant_4_3di = ['block','none','none','none'];
+                pant_4_4di = ['none','block','none','none'];
+            }else{
+                if(pant_4_1di[2]=='block'){
+                pant_4_1di = ['none','none','none','block'];
+                pant_4_2di = ['block','none','none','none'];
+                pant_4_3di = ['none','block','none','none'];
+                pant_4_4di = ['none','none','block','none'];
+            }else{
+                if(pant_4_1di[3]=='block'){
+                pant_3_1di = ['block','none','none','none'];
+                pant_3_2di = ['none','block','none','none'];
+                pant_3_3di = ['none','none','block','none'];
+                pant_3_4di = ['none','none','none','block'];
+            }else{
+
+                
+            }}}}
+            pant4_1_cam1.style.display = pant_4_1di[0];
+            pant4_1_cam2.style.display = pant_4_1di[1];
+            pant4_1_cam2_i.style.display = pant_4_1di[2];
+            pant4_1_mapa.style.display = pant_4_1di[3];
+            pant4_2_cam1.style.display = pant_4_2di[0];
+            pant4_2_cam2.style.display = pant_4_2di[1];
+            pant4_2_cam2_i.style.display = pant_4_2di[2];
+            pant4_2_mapa.style.display = pant_4_2di[3];
+            pant4_3_cam1.style.display = pant_4_3di[0];
+            pant4_3_cam2.style.display = pant_4_3di[1];
+            pant4_3_cam2_i.style.display = pant_4_3di[2];
+            pant4_3_mapa.style.display = pant_4_3di[3];
+            pant4_4_cam1.style.display = pant_4_4di[0];
+            pant4_4_cam2.style.display = pant_4_4di[1];
+            pant4_4_cam2_i.style.display = pant_4_4di[2];
+            pant4_4_mapa.style.display = pant_4_4di[3];
+        });
+
+        function Estado0(){
+            pant1.style.display = 'none';
+            pant2.style.display = 'none';
+            pant3.style.display = 'none';
+            pant4.style.display = 'none';
+            estado = 0;
+        }
+
     </script>
+
 </body>
 </html>
