@@ -17,11 +17,11 @@
     
     
     <div id="pant1" style="display: none; ">
-        <img id="pant1_1_cam1" src="Grafica\Camara_1.jpg" style="position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
+        <img id="pant1_1_cam1" src="Grafica\Camara_1.jpg" style="display: block; position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
         <img id="pant1_1_cam2" src="Grafica\Camara_2.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
         <img id="pant1_1_cam2_i" src="Grafica\Camara_2_i.jpg" style="display: none; position: absolute; left: 2%; top: 3%; width:96%; height:75%;"  >
-        <div id="pant1_1" style="position: absolute; left: 2%; top: 3%; width:96%; height:75%;" ></div>
         <img id="pant1_2_mapa" src="Grafica\Mapa.png" style="position: absolute; left: 78%; top: 58%; width:20%; height:20%;"  >
+        <div id="pant1_1" style="position: absolute; left: 2%; top: 3%; width:96%; height:75%;" ></div>
         <div id="pant1_2" style="position: absolute; left: 78%; top: 58%; width:20%; height:20%;"  ></div>
     </div>
     
@@ -88,7 +88,7 @@
         <div id="pant4_1" style="position: absolute; left: 2%; top: 3%; width:47.5%; height:36%;"  > </div>
         <div id="pant4_2" style="position: absolute; left: 50.5%; top: 3%; width:47.5%; height:36%;"  > </div>
         <div id="pant4_3" style="position: absolute; left: 2%; top: 42%; width:47.5%; height:36%;"  > </div>
-        <div id="pant4_3" style="position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  > </div>
+        <div id="pant4_4" style="position: absolute; left: 50.5%; top: 42%; width:47.5%; height:36%;"  > </div>
     </div>
 
     <script>
@@ -161,6 +161,14 @@
                     pant1_1_cam1.style.display = 'block';
                     pant1_1_cam2_i.style.display = 'none';
                 }
+            }
+        });
+
+        pant1_2.addEventListener('click', function() {
+            if(pant1_2_mapa.style.opacity == 0.35){
+                pant1_2_mapa.style.opacity = 1;
+            }else{
+                pant1_2_mapa.style.opacity = 0.35;
             }
         });
 
@@ -281,98 +289,19 @@
         });
 
         pant4_1.addEventListener('click', function() {
-
-            if(pant_4_1di[0]=='block'){
-                alert('hola');
-                pant_4_1di = ['none','block','none','none'];
-                pant_4_2di = ['none','none','block','none'];
-                pant_4_3di = ['none','none','none','block'];
-                pant_4_4di = ['block','none','none','none'];
-            }else{
-                if(pant_4_1di[1]=='block'){
-                pant_4_1di = ['none','none','block','none'];
-                pant_4_2di = ['none','none','none','block'];
-                pant_4_3di = ['block','none','none','none'];
-                pant_4_4di = ['none','block','none','none'];
-            }else{
-                if(pant_4_1di[2]=='block'){
-                pant_4_1di = ['none','none','none','block'];
-                pant_4_2di = ['block','none','none','none'];
-                pant_4_3di = ['none','block','none','none'];
-                pant_4_4di = ['none','none','block','none'];
-            }else{
-                if(pant_4_1di[3]=='block'){
-                pant_3_1di = ['block','none','none','none'];
-                pant_3_2di = ['none','block','none','none'];
-                pant_3_3di = ['none','none','block','none'];
-                pant_3_4di = ['none','none','none','block'];
-            }else{
-
-                
-            }}}}
-            pant4_1_cam1.style.display = pant_4_1di[0];
-            pant4_1_cam2.style.display = pant_4_1di[1];
-            pant4_1_cam2_i.style.display = pant_4_1di[2];
-            pant4_1_mapa.style.display = pant_4_1di[3];
-            pant4_2_cam1.style.display = pant_4_2di[0];
-            pant4_2_cam2.style.display = pant_4_2di[1];
-            pant4_2_cam2_i.style.display = pant_4_2di[2];
-            pant4_2_mapa.style.display = pant_4_2di[3];
-            pant4_3_cam1.style.display = pant_4_3di[0];
-            pant4_3_cam2.style.display = pant_4_3di[1];
-            pant4_3_cam2_i.style.display = pant_4_3di[2];
-            pant4_3_mapa.style.display = pant_4_3di[3];
-            pant4_4_cam1.style.display = pant_4_4di[0];
-            pant4_4_cam2.style.display = pant_4_4di[1];
-            pant4_4_cam2_i.style.display = pant_4_4di[2];
-            pant4_4_mapa.style.display = pant_4_4di[3];
+            funcion_pant4();
         });
-                pant4_1.addEventListener('click', function() {
 
-            if(pant_4_1di[0]=='block'){
-                alert('hola');
-                pant_4_1di = ['none','block','none','none'];
-                pant_4_2di = ['none','none','block','none'];
-                pant_4_3di = ['none','none','none','block'];
-                pant_4_4di = ['block','none','none','none'];
-            }else{
-                if(pant_4_1di[1]=='block'){
-                pant_4_1di = ['none','none','block','none'];
-                pant_4_2di = ['none','none','none','block'];
-                pant_4_3di = ['block','none','none','none'];
-                pant_4_4di = ['none','block','none','none'];
-            }else{
-                if(pant_4_1di[2]=='block'){
-                pant_4_1di = ['none','none','none','block'];
-                pant_4_2di = ['block','none','none','none'];
-                pant_4_3di = ['none','block','none','none'];
-                pant_4_4di = ['none','none','block','none'];
-            }else{
-                if(pant_4_1di[3]=='block'){
-                pant_3_1di = ['block','none','none','none'];
-                pant_3_2di = ['none','block','none','none'];
-                pant_3_3di = ['none','none','block','none'];
-                pant_3_4di = ['none','none','none','block'];
-            }else{
+        pant4_2.addEventListener('click', function() {
+            funcion_pant4();
+        });
 
-                
-            }}}}
-            pant4_1_cam1.style.display = pant_4_1di[0];
-            pant4_1_cam2.style.display = pant_4_1di[1];
-            pant4_1_cam2_i.style.display = pant_4_1di[2];
-            pant4_1_mapa.style.display = pant_4_1di[3];
-            pant4_2_cam1.style.display = pant_4_2di[0];
-            pant4_2_cam2.style.display = pant_4_2di[1];
-            pant4_2_cam2_i.style.display = pant_4_2di[2];
-            pant4_2_mapa.style.display = pant_4_2di[3];
-            pant4_3_cam1.style.display = pant_4_3di[0];
-            pant4_3_cam2.style.display = pant_4_3di[1];
-            pant4_3_cam2_i.style.display = pant_4_3di[2];
-            pant4_3_mapa.style.display = pant_4_3di[3];
-            pant4_4_cam1.style.display = pant_4_4di[0];
-            pant4_4_cam2.style.display = pant_4_4di[1];
-            pant4_4_cam2_i.style.display = pant_4_4di[2];
-            pant4_4_mapa.style.display = pant_4_4di[3];
+        pant4_3.addEventListener('click', function() {
+            funcion_pant4();
+        });
+
+        pant4_4.addEventListener('click', function() {
+            funcion_pant4();
         });
 
         function Estado0(){
@@ -381,6 +310,48 @@
             pant3.style.display = 'none';
             pant4.style.display = 'none';
             estado = 0;
+        }
+
+        function funcion_pant4(){
+            if(pant_4_1di[0]=='block'){
+                pant_4_1di = ['none','block','none','none'];
+                pant_4_2di = ['none','none','block','none'];
+                pant_4_3di = ['none','none','none','block'];
+                pant_4_4di = ['block','none','none','none'];
+            }else{
+                if(pant_4_1di[1]=='block'){
+                pant_4_1di = ['none','none','block','none'];
+                pant_4_2di = ['none','none','none','block'];
+                pant_4_3di = ['block','none','none','none'];
+                pant_4_4di = ['none','block','none','none'];
+            }else{
+                if(pant_4_1di[2]=='block'){
+                pant_4_1di = ['none','none','none','block'];
+                pant_4_2di = ['block','none','none','none'];
+                pant_4_3di = ['none','block','none','none'];
+                pant_4_4di = ['none','none','block','none'];
+            }else{
+                pant_4_1di = ['block','none','none','none'];
+                pant_4_2di = ['none','block','none','none'];
+                pant_4_3di = ['none','none','block','none'];
+                pant_4_4di = ['none','none','none','block'];
+            }}}
+            pant4_1_cam1.style.display = pant_4_1di[0];
+            pant4_1_cam2.style.display = pant_4_1di[1];
+            pant4_1_cam2_i.style.display = pant_4_1di[2];
+            pant4_1_mapa.style.display = pant_4_1di[3];
+            pant4_2_cam1.style.display = pant_4_2di[0];
+            pant4_2_cam2.style.display = pant_4_2di[1];
+            pant4_2_cam2_i.style.display = pant_4_2di[2];
+            pant4_2_mapa.style.display = pant_4_2di[3];
+            pant4_3_cam1.style.display = pant_4_3di[0];
+            pant4_3_cam2.style.display = pant_4_3di[1];
+            pant4_3_cam2_i.style.display = pant_4_3di[2];
+            pant4_3_mapa.style.display = pant_4_3di[3];
+            pant4_4_cam1.style.display = pant_4_4di[0];
+            pant4_4_cam2.style.display = pant_4_4di[1];
+            pant4_4_cam2_i.style.display = pant_4_4di[2];
+            pant4_4_mapa.style.display = pant_4_4di[3];
         }
 
     </script>
