@@ -90,8 +90,21 @@
         <div id="pant4_3" style="position: absolute; left: 2%; top: 51%; width:42.5%; height:46%;"  > </div>
         <div id="pant4_4" style="position: absolute; left: 45.5%; top: 51%; width:42.5%; height:46%;"  > </div>
     </div>
+    <div id="video2" style="position: absolute; left: 0%; top: 0%; width:100%; height:100%; background-color: rgb(99, 99, 99);"  > </div>
+    <video style="position: absolute; left: 0%; top: 0%; width:100%; height:100%; "id="mi-video" src="Grafica\video.mp4" autoplay muted></video>
 
     <script>
+        var video = document.getElementById('mi-video');
+
+    // Muestra el video
+    video.style.display = 'block';
+     
+    // Después de 10 segundos, oculta el video
+    setTimeout(function() {
+    video.style.display = 'none';
+    video.style.display = 'none';
+    }, 5000); // 10000 milisegundos (10 segundos)
+
         let estado = 0;
         var bandera =0;
         var pant_2_1_ult = 0;
